@@ -74,8 +74,9 @@ Screen1 As screen:
     Form1 As form:
         DataSource: =Inventories
         Item: =Gallery1.Selected
-        X: =55
-        Y: =251
+        Width: =518
+        X: =693
+        Y: =65
         ZIndex: =2
 
         Count_DataCard1 As typedDataCard.numberEditCard:
@@ -88,7 +89,7 @@ Screen1 As screen:
             Height: =50
             Required: =true
             Update: =Value(DataCardValue3.Text)
-            Width: =266
+            Width: =172
             X: =2
             Y: =0
             ZIndex: =1
@@ -154,7 +155,7 @@ Screen1 As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
-            Width: =266
+            Width: =172
             X: =0
             Y: =1
             ZIndex: =1
@@ -192,7 +193,7 @@ Screen1 As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue5.Selected
-            Width: =266
+            Width: =172
             X: =1
             Y: =1
             ZIndex: =1
@@ -259,7 +260,7 @@ Screen1 As screen:
             MaxLength: =DataSourceInfo([@Inventories], DataSourceInfo.MaxLength, "manil_name")
             Required: =true
             Update: =DataCardValue1.Text
-            Width: =266
+            Width: =172
             X: =0
             Y: =0
             ZIndex: =3
@@ -325,7 +326,7 @@ Screen1 As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
-            Width: =266
+            Width: =172
             X: =1
             Y: =0
             ZIndex: =3
@@ -364,7 +365,7 @@ Screen1 As screen:
                 {Name: Form1.Updates.Name, Count: Form1.Updates.Count}
             )
         Text: ="Save"
-        X: =896
-        Y: =320
+        X: =1001
+        Y: =575
         ZIndex: =3
 
