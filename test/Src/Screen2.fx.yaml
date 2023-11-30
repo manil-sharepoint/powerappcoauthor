@@ -1,0 +1,285 @@
+Screen2 As screen:
+
+    table2 As Table.pcfdataset:
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =0
+        HeaderFontSize: =0
+        Height: =495
+        Items: =Filter(Inventories, 'Inventories (Views)'.'Active Inventories')
+        NoDataText: =""
+        ReflowBehavior: ='PowerAppsOneGrid.ReflowBehavior'.Reflow
+        Width: =628
+        X: =4
+        Y: =168
+        ZIndex: =1
+
+        Name1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Name"
+            FieldName: ="manil_name"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =1
+
+        "'Created On1' As pcfDataField.textualColumn":
+            FieldDisplayName: ="Created On"
+            FieldName: ="createdon"
+            FieldType: ="d"
+            FieldVariantName: ="textualColumn"
+            Order: =5
+            ZIndex: =2
+
+        Count1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Count"
+            FieldName: ="manil_count"
+            FieldType: ="n"
+            FieldVariantName: ="textualColumn"
+            Order: =4
+            ZIndex: =3
+
+        Item1 As pcfDataField:
+            FieldDisplayName: ="Item"
+            FieldName: ="manil_Items"
+            FieldType: ="E"
+            FieldVariantName: ="complexTypeColumn"
+            Order: =2
+            ZIndex: =5
+
+    ButtonCanvas1 As Button:
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =Set(varFormMode, "new")
+        Text: ="New"
+        Width: =96
+        X: =498
+        Y: =91
+        ZIndex: =2
+
+    ButtonCanvas1_1 As Button:
+        BasePaletteColor: =
+        DisplayMode: =If(CountRows(table2.SelectedItems) = 1, DisplayMode.Edit, DisplayMode.Disabled)
+        Height: =32
+        OnSelect: =Set(varFormMode, "edit");Set(varSelectedItem, table2.Selected)
+        Text: ="Edit"
+        Width: =96
+        X: =352
+        Y: =91
+        ZIndex: =3
+
+    Form2 As form.PowerApps_CoreControls_Form:
+        DataSource: =Inventories
+        DefaultMode: =If(varFormMode = "new", FormMode.New, FormMode.Edit)
+        Item: =varSelectedItem
+        NumberOfColumns: =1
+        UseFluentV9Cards: =true
+        Width: =401
+        X: =645
+        Y: =91
+        ZIndex: =5
+
+        Item_DataCard2 As typedDataCard.fluentV9ComboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="manil_Items"
+            Default: =ThisItem.Item
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Inventories],DataSourceInfo.DisplayName,"manil_Items")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            Required: =false
+            Update: =DataCardValue8.Selected
+            Width: =401
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey8 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue8 As Combobox.pcfdataset:
+                AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                DisplayMode: =Parent.DisplayMode
+                Height: =32
+                Items: =Choices([@Inventories].manil_Items)
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey8.Y + DataCardKey8.Height + 4
+                ZIndex: =2
+
+                "'Created On2' As pcfDataField.textualColumn":
+                    FieldDisplayName: ="Created On"
+                    FieldName: ="createdon"
+                    FieldType: ="d"
+                    FieldVariantName: ="textualColumn"
+                    Order: =2
+                    ZIndex: =6
+
+                Name2 As pcfDataField.textualColumn:
+                    FieldDisplayName: ="Name"
+                    FieldName: ="manil_name"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =7
+
+        Count_DataCard2 As typedDataCard.fluentV9NumberEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="manil_count"
+            Default: =ThisItem.Count
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Inventories],DataSourceInfo.DisplayName,"manil_count")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            Required: =true
+            Update: =Value(DataCardValue9.Value)
+            Width: =401
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey9 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue9 As 'Text input'":
+                AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                BasePaletteColor: =
+                DisplayMode: =Parent.DisplayMode
+                Height: =32
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey9.Y + DataCardKey9.Height + 4
+                ZIndex: =2
+
+            ErrorMessage6 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue9.Y + DataCardValue9.Height
+                ZIndex: =3
+
+            StarVisible6 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey9.Y
+                ZIndex: =4
+
+        Name_DataCard2 As typedDataCard.fluentV9TextualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="manil_name"
+            Default: =ThisItem.Name
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Inventories],DataSourceInfo.DisplayName,"manil_name")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            MaxLength: =DataSourceInfo([@Inventories], DataSourceInfo.MaxLength, "manil_name")
+            Required: =true
+            Update: =DataCardValue6.Value
+            Width: =401
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey6 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue6 As 'Text input'":
+                AccessibleLabel: =Parent.DisplayName
+                BasePaletteColor: =
+                DisplayMode: =Parent.DisplayMode
+                Height: =32
+                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                Required: =Parent.Required
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey6.Y + DataCardKey6.Height + 4
+                ZIndex: =2
+
+            ErrorMessage4 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue6.Y + DataCardValue6.Height
+                ZIndex: =3
+
+            StarVisible4 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey6.Y
+                ZIndex: =4
+
+    ButtonCanvas2 As Button:
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: |-
+            =If(varFormMode = "edit", Patch(
+                Inventories,
+                LookUp(
+                    Inventories,
+                    Inventory = table2.Selected.Inventory
+                ),
+                {Name: Form2.Updates.Name, Count: Form2.Updates.Count, Item: Form2.Updates.Item}
+            ),  Patch(
+                Inventories,
+                {Name: Form2.Updates.Name, Count: Form2.Updates.Count, Item: Form2.Updates.Item}
+            ));
+            ClearCollect(a,Errors(Inventories));
+        Text: ="Save"
+        Width: =96
+        X: =907
+        Y: =591
+        ZIndex: =6
+
+    Label1 As label:
+        Text: =If(First(a)
+        X: =1135
+        Y: =128
+        ZIndex: =7
+

@@ -1,0 +1,99 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "manil_inventories",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "manil_inventory",
+    "MaxGetRowsCount": 500,
+    "Name": "Inventories",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "manil_count": "Count",
+      "manil_inventory_AsyncOperations": "System Jobs",
+      "manil_inventory_BulkDeleteFailures": "Bulk Delete Failures",
+      "manil_inventory_DuplicateBaseRecord": "Duplicate Records (manil_inventory_DuplicateBaseRecord)",
+      "manil_inventory_DuplicateMatchingRecord": "Duplicate Records (manil_inventory_DuplicateMatchingRecord)",
+      "manil_inventory_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "manil_inventory_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "manil_inventory_ProcessSession": "Process Sessions",
+      "manil_inventory_SyncErrors": "Sync Errors",
+      "manil_inventoryid": "Inventory",
+      "manil_Items": "Item",
+      "manil_name": "Name",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Inventories",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Inventories (Views)",
+    "Name": "_manil_inventory_views",
+    "RelatedEntityName": "Inventories",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "2de4e168-f915-4471-82c5-d43c9bf98e97": "Active Inventories",
+      "4f7d8a28-6d15-47f6-865a-6f30343fe1cd": "Inventory Advanced Find View",
+      "706c91c4-eb54-4049-a537-647fbcb77ddc": "Inventory Associated View",
+      "ca060436-d11d-4cd8-90ab-5265e37f4696": "Inactive Inventories",
+      "fba3cd99-e578-4b92-a955-af696adad20e": "Inventory Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (Inventories)",
+    "Name": "manil_inventory_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Inventories"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Inventories",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Inventories)",
+    "Name": "manil_inventory_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Inventories"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Inventories",
+    "Type": "OptionSetInfo"
+  }
+]

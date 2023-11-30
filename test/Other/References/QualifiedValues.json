@@ -1,0 +1,18 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_manil_inventory_forms",
+      "Namespace": "Inventories (Forms)",
+      "Values": {
+        "Information": "576a40ba-2255-47a1-bf59-bd172657222e"
+      }
+    },
+    {
+      "Kind": "default.cds_manil_items_forms",
+      "Namespace": "Items (Forms)",
+      "Values": {
+        "Information": "1392f8cd-f1ba-4b96-8598-fdcd5c30853e"
+      }
+    }
+  ]
+}
