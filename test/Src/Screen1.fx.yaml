@@ -372,6 +372,7 @@ Screen1 As screen:
     ButtonCanvas3 As Button:
         DisplayMode: =DisplayMode.Edit
         Height: =32
+        Text: ="Button changed"
         Width: =96
         X: =513
         Y: =660
