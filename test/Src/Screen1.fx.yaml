@@ -369,3 +369,11 @@ Screen1 As screen:
         Y: =575
         ZIndex: =3
 
+    ButtonCanvas3 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Width: =96
+        X: =513
+        Y: =660
+        ZIndex: =4
+
