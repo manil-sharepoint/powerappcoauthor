@@ -370,6 +370,7 @@ Screen1 As screen:
         ZIndex: =3
 
     ButtonCanvas3 As Button:
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =32
         Text: ="Button changed"
