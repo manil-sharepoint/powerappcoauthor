@@ -15,6 +15,7 @@
       "createdonbehalfby": "Created By (Delegate)",
       "importsequencenumber": "Import Sequence Number",
       "manil_count": "Count",
+      "manil_engagementnumber": "EngagementNumber",
       "manil_inventory_AsyncOperations": "System Jobs",
       "manil_inventory_BulkDeleteFailures": "Bulk Delete Failures",
       "manil_inventory_DuplicateBaseRecord": "Duplicate Records (manil_inventory_DuplicateBaseRecord)",

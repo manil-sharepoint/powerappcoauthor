@@ -48,6 +48,12 @@ Screen2 As screen:
     ButtonCanvas1 As Button:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        Font: =""
+        FontColor: =
+        FontItalic: =false
+        FontStrikethrough: =false
+        FontUnderline: =false
+        FontWeight: =""
         Height: =32
         OnSelect: =Set(varFormMode, "new")
         Text: ="New"
@@ -59,6 +65,12 @@ Screen2 As screen:
     ButtonCanvas1_1 As Button:
         BasePaletteColor: =
         DisplayMode: =If(CountRows(table2.SelectedItems) = 1, DisplayMode.Edit, DisplayMode.Disabled)
+        Font: =""
+        FontColor: =
+        FontItalic: =false
+        FontStrikethrough: =false
+        FontUnderline: =false
+        FontWeight: =""
         Height: =32
         OnSelect: =Set(varFormMode, "edit");Set(varSelectedItem, table2.Selected)
         Text: ="Edit"
@@ -95,6 +107,11 @@ Screen2 As screen:
 
             DataCardKey8 As Text:
                 DisplayMode: =DisplayMode.Edit
+                Font: =""
+                FontColor: =
+                FontItalic: =false
+                FontStrikethrough: =false
+                FontUnderline: =false
                 Height: =22
                 Text: =Parent.DisplayName
                 Weight: ='TextCanvas.Weight'.Semibold
@@ -107,8 +124,13 @@ Screen2 As screen:
             DataCardValue8 As Combobox.pcfdataset:
                 AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
                 DisplayMode: =Parent.DisplayMode
+                Font: =""
+                FontItalic: =false
+                FontStrikethrough: =false
+                FontUnderline: =false
+                FontWeight: =""
                 Height: =32
-                Items: =Choices([@Inventories].manil_Items)
+                Items: =Choices([@Inventories].Item)
                 ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                 Width: =Parent.Width - 48
                 X: =24
@@ -148,6 +170,11 @@ Screen2 As screen:
 
             DataCardKey9 As Text:
                 DisplayMode: =DisplayMode.Edit
+                Font: =""
+                FontColor: =
+                FontItalic: =false
+                FontStrikethrough: =false
+                FontUnderline: =false
                 Height: =22
                 Text: =Parent.DisplayName
                 Weight: ='TextCanvas.Weight'.Semibold
@@ -159,8 +186,15 @@ Screen2 As screen:
 
             "DataCardValue9 As 'Text input'":
                 AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                Align: ="Start"
                 BasePaletteColor: =
                 DisplayMode: =Parent.DisplayMode
+                Font: =""
+                FontColor: =
+                FontItalic: =false
+                FontStrikethrough: =false
+                FontUnderline: =false
+                FontWeight: =""
                 Height: =32
                 ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                 Value: =Parent.Default
@@ -171,6 +205,11 @@ Screen2 As screen:
 
             ErrorMessage6 As Text:
                 DisplayMode: =DisplayMode.Edit
+                Font: =""
+                FontColor: =
+                FontItalic: =false
+                FontStrikethrough: =false
+                FontUnderline: =false
                 Height: =30
                 Text: =Parent.Error
                 Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
@@ -183,6 +222,11 @@ Screen2 As screen:
             StarVisible6 As Text:
                 Align: ='TextCanvas.Align'.Center
                 DisplayMode: =DisplayMode.Edit
+                Font: =""
+                FontColor: =
+                FontItalic: =false
+                FontStrikethrough: =false
+                FontUnderline: =false
                 Height: =30
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
@@ -209,6 +253,11 @@ Screen2 As screen:
 
             DataCardKey6 As Text:
                 DisplayMode: =DisplayMode.Edit
+                Font: =""
+                FontColor: =
+                FontItalic: =false
+                FontStrikethrough: =false
+                FontUnderline: =false
                 Height: =22
                 Text: =Parent.DisplayName
                 Weight: ='TextCanvas.Weight'.Semibold
@@ -220,8 +269,15 @@ Screen2 As screen:
 
             "DataCardValue6 As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
+                Align: ="Start"
                 BasePaletteColor: =
                 DisplayMode: =Parent.DisplayMode
+                Font: =""
+                FontColor: =
+                FontItalic: =false
+                FontStrikethrough: =false
+                FontUnderline: =false
+                FontWeight: =""
                 Height: =32
                 Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
                 Required: =Parent.Required
@@ -234,6 +290,11 @@ Screen2 As screen:
 
             ErrorMessage4 As Text:
                 DisplayMode: =DisplayMode.Edit
+                Font: =""
+                FontColor: =
+                FontItalic: =false
+                FontStrikethrough: =false
+                FontUnderline: =false
                 Height: =30
                 Text: =Parent.Error
                 Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
@@ -246,6 +307,11 @@ Screen2 As screen:
             StarVisible4 As Text:
                 Align: ='TextCanvas.Align'.Center
                 DisplayMode: =DisplayMode.Edit
+                Font: =""
+                FontColor: =
+                FontItalic: =false
+                FontStrikethrough: =false
+                FontUnderline: =false
                 Height: =30
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
@@ -257,6 +323,12 @@ Screen2 As screen:
     ButtonCanvas2 As Button:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        Font: =""
+        FontColor: =
+        FontItalic: =false
+        FontStrikethrough: =false
+        FontUnderline: =false
+        FontWeight: =""
         Height: =32
         OnSelect: |-
             =If(varFormMode = "edit", Patch(

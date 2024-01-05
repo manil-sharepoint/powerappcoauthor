@@ -40,7 +40,7 @@
     "Name": "PowerApps_CoreControls_ButtonCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Button",
-    "Version": "0.0.25"
+    "Version": "0.0.27"
   },
   "combobox": {
     "CustomGroupControlTemplateName": "",
@@ -69,7 +69,7 @@
     "Name": "PowerApps_CoreControls_ComboboxCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Combobox",
-    "Version": "0.0.20"
+    "Version": "0.0.24"
   },
   "form": {
     "CustomGroupControlTemplateName": "",
@@ -97,7 +97,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "gallery",
     "OverridableProperties": {},
-    "Version": "2.13.2"
+    "Version": "2.14.0"
   },
   "galleryTemplate": {
     "CustomGroupControlTemplateName": "",
@@ -221,7 +221,7 @@
     "Name": "PowerAppsOneGrid",
     "OverridableProperties": {},
     "TemplateDisplayName": "Table",
-    "Version": "1.0.122"
+    "Version": "1.0.128"
   },
   "text": {
     "CustomGroupControlTemplateName": "",
@@ -250,7 +250,7 @@
     "Name": "PowerApps_CoreControls_TextCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Text",
-    "Version": "0.0.17"
+    "Version": "0.0.20"
   },
   "Text input": {
     "CustomGroupControlTemplateName": "",
@@ -265,7 +265,7 @@
     "Name": "PowerApps_CoreControls_TextInputCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Text input",
-    "Version": "0.0.21"
+    "Version": "0.0.24"
   },
   "typedDataCard": {
     "CustomGroupControlTemplateName": "",

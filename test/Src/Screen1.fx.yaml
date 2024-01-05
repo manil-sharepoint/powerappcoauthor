@@ -372,6 +372,12 @@ Screen1 As screen:
     ButtonCanvas3 As Button:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        Font: =""
+        FontColor: =
+        FontItalic: =false
+        FontStrikethrough: =false
+        FontUnderline: =false
+        FontWeight: =""
         Height: =32
         Text: ="Button changed"
         Width: =96
